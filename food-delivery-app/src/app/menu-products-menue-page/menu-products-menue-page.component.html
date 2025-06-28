@@ -1,0 +1,23 @@
+<div class="container text-center my-5">
+  <div class="header my-5">
+    <h1 style="font-size: 60px; " >Our Products</h1>
+  <p>We consider all the drivers of change give you the components you need to change to create a truly happens.</p>
+
+  </div>
+  
+  <!-- Menu Items -->
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="product.image" alt="{{ product.productName }}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">Price: ${{ product.productPrice }}</p>
+          <p class="card-text">{{ product.description }}</p>
+          <a href="#" class="btn rounded-5 text-white" style="background-color: #AD343E;">View Details</a> <!-- Adjust the button as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

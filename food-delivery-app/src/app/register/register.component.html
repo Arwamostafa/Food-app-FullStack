@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h1 style="font-size: 50px; text-align: center;" class="my-5">Register</h1>
+  
+    <form (ngSubmit)="register()">
+      <div class="form-group mt-3">
+        <label for="username" class="ms-3 my-2">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required class="form-control rounded-5">
+      </div>
+  
+      <div class="form-group mt-3">
+        <label for="password" class="ms-3 my-2">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required class="form-control rounded-5">
+      </div>
+  
+      <div class="form-group mt-3">
+        <label for="confirmPassword" class="ms-3 my-2">Confirm Password:</label>
+        <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required class="form-control rounded-5">
+      </div>
+  
+      <button type="submit" class="btn  mt-5 w-100 m-auto  rounded-5  text-white" style="background-color: #AD343E;">Register</button>
+    </form>
+  
+    <!-- Show error message if any -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+  
+    <!-- Show success message if registration is successful -->
+    <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+  </div>
+  
+  

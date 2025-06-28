@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-image: url('../../assets/img/Mask group.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    
+
+
+  }
+  
+  .hero-buttons .btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 50px; 
+  }
+  
+  .btn-primary {
+    background-color: #AD343E;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #AD343E;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+  }

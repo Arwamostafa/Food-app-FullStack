@@ -1,0 +1,35 @@
+<!-- src/app/product-delete-admin/product-delete-admin.component.html -->
+<div class="container my-5 ">
+    <h2 class="text-center mb-4">Delete Product</h2>
+  
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <div *ngIf="product" class="card">
+      <div class="card-header">
+        Confirm Deletion
+      </div>
+      <div class="card-body my-5">
+        <h5 class="card-title fs-1 text-center my-5">Are you sure you want to delete the following product?</h5>
+<div class="my-5">
+     <img *ngIf="product?.image" [src]="product.image" class="card-img-top" alt="{{ product?.productName }}" />
+        <p class="card-text fw-bolder fs-3"><strong>Product Name:</strong> {{ product.productName }}</p>
+        <p class="card-text fw-bolder fs-3"><strong>Product Price:</strong> {{ product.productPrice | currency }}</p>
+        <p class="card-text fw-bolder fs-3"><strong>Product Price:</strong> {{ product. productSupplier }}</p>
+        <p class="card-text fw-bolder fs-3"><strong>Product Price:</strong> {{ product. productQuantity }}</p>
+</div>
+       
+  <div class="d-flex justify-content-center">
+      <button (click)="confirmDelete()" class="btn btn-danger m-5 w-25">Delete</button>
+        <button (click)="router.navigate(['/list'])" class="btn btn-secondary  m-5  w-25 h-25">Cancel</button>
+  </div>
+      
+      </div>
+    </div>
+  </div>
+  

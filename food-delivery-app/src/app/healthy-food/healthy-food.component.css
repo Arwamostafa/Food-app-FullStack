@@ -1,0 +1,282 @@
+
+/* 
+body {
+  
+        font-family: 'Roboto', sans-serif;
+      
+    padding: 20px;
+}
+.bid-container{
+    padding: 60px 40px ;
+    background-color: #f8f8f8;
+}
+/* Healthy Food Section */
+/*.healthy-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 90%;
+    margin: auto;
+   
+
+
+}
+
+.wrap-image {
+    position: relative;
+    width: 45%;
+   
+}
+
+.wrap-image img {
+    width: 599px;
+    height: 599px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 320px;
+    left: 180px;
+    background-color: rgb(51, 51, 51);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    width: 411px;
+    height: 321px;
+    
+}
+
+.contact-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-overlay p {
+    font-size: 14px;
+    /* margin-bottom: 8px; */
+    
+/* }
+.contact-overlay {
+    
+    margin: 0 50px;
+
+  
+} */
+
+/* Text Content Section */
+/* .big-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-content {
+    width: 557px;
+    height: 353px;
+    
+    
+}
+
+.text-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid black; 
+    margin-top: 50px;
+}
+
+.more-btn:hover {
+    background-color: #ff6347;
+} */ 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+.bid-container {
+    padding: 60px 40px;
+    background-color: #f8f8f8;
+}
+
+/* Healthy Food Section */
+.healthy-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.wrap-image {
+    position: relative;
+    width: 45%;
+}
+
+.wrap-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 320px;
+    left: 180px;
+    background-color: rgb(51, 51, 51);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    width: 411px;
+    height: 321px;
+}
+
+.contact-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-overlay p {
+    font-size: 14px;
+}
+
+.contact-overlay {
+    margin: 0 50px;
+}
+
+/* Text Content Section */
+.big-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content {
+    width: 557px;
+    height: 353px;
+}
+
+.text-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid black;
+    margin-top: 50px;
+}
+
+.more-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Media Queries */
+@media (max-width: 990px) {
+.wrap-image{
+    width: 100%;
+}
+
+
+}
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+    .healthy-food {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wrap-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-overlay {
+        position: static;
+        margin-top: -50px;
+        width: 90%;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 15px;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .wrap-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-overlay {
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        top: initial;
+        left: initial;
+    }
+
+    .contact-overlay h2 {
+        font-size: 16px;
+    }
+
+    .contact-overlay p {
+        font-size: 13px;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .text-content h1 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .more-btn {
+        padding: 12px 15px;
+    }
+}
+

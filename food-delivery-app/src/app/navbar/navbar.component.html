@@ -1,0 +1,167 @@
+<header class="header">
+  <div class="contact-info">
+    <span><i class="fas fa-phone-alt"></i> (414) 857 - 0107</span>
+    <span><i class="fas fa-envelope"></i> yummybistrobliss</span>
+  </div>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+    <a href="#"><i class="fab fa-twitter p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+    <a href="#"><i class="fab fa-instagram p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+  </div>
+</header>
+
+<!-- Conditional rendering of the navbar -->
+<nav class="navbar" *ngIf="!isLoginOrRegister()">
+  <div class="logo">
+    <img src="../../assets/img/Vector.png" alt="Bistro Bliss Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+    <li><a routerLink="/book" routerLinkActive="active">Book Table</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+
+    <!-- Conditionally show Manage Products dropdown if user is admin -->
+    <li class="nav-item dropdown" *ngIf="isAdmin()">
+      <div class="dropdown book-table">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Manage Products
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" routerLink="/add" routerLinkActive="active">Add Product</a></li>
+          <li><a class="dropdown-item" routerLink="/list" routerLinkActive="active">Product List</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Logout button visible if user is logged in -->
+  <button *ngIf="!isLoginOrRegister()" class="btn btn-outline-dark" style="background-color: #AD343E;" (click)="logout()">
+    Logout
+  </button>
+  <!-- <button class="btn book-table btn-outline-dark">
+    <a routerLink="/book" routerLinkActive="active" style="text-decoration: none; color: aliceblue;">Book A Table</a>
+  </button> -->
+</nav>
+
+<!-- <div class="contact-info">
+     <span><i class="fas fa-phone-alt"></i> (414) 857 - 0107</span>
+     <span><i class="fas fa-envelope"></i> yummybistrobliss</span>
+   </div>
+   <div class="social-icons">
+     <a href="#"><i class="fab fa-facebook p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-twitter p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-instagram p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+   </div>
+ </header> -->
+ 
+ <!-- Conditional rendering of the navbar -->
+ <!-- <nav class="navbar" *ngIf="!isLoginOrRegister()">
+   <div class="logo">
+     <img src="../../assets/img/Vector.png" alt="Bistro Bliss Logo">
+   </div>
+   <ul class="nav-links">
+     <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+     <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+     <li><a routerLink="/book" routerLinkActive="active">Book Table</a></li>
+     <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+     <li class="nav-item dropdown">
+       <div class="dropdown book-table">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+           Manage Products
+         </button>
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <li><a class="dropdown-item" routerLink="/add" routerLinkActive="active">Add Product</a></li>
+           <li><a class="dropdown-item" routerLink="/list" routerLinkActive="active">Product List</a></li>
+         </ul>
+       </div>
+     </li>
+   </ul>
+   <button class="btn book-table btn-outline-dark">
+     <a routerLink="/book" routerLinkActive="active" style="text-decoration: none; color: aliceblue;">Book A Table</a>
+   </button>
+ </nav>  --> 
+ <!-- <header class="header">
+   <div class="contact-info">
+     <span><i class="fas fa-phone-alt"></i> (414) 857 - 0107</span>
+     <span><i class="fas fa-envelope"></i> yummybistrobliss</span>
+   </div>
+   <div class="social-icons">
+     <a href="#"><i class="fab fa-facebook p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-twitter p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-instagram p-2 rounded-5" style="background-color:gray; font-size: 15px;"></i></a>
+   </div>
+ </header>
+ 
+ <!-- Conditional rendering of the navbar -->
+ <!-- <nav class="navbar" *ngIf="!isLoginOrRegister()">
+   <div class="logo">
+     <img src="../../assets/img/Vector.png" alt="Bistro Bliss Logo">
+   </div>
+   <ul class="nav-links">
+     <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+     <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+     <li><a routerLink="/book" routerLinkActive="active">Book Table</a></li>
+     <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+ 
+     <!-- Conditionally show the dropdown menu for admins -->
+     <!-- <li class="nav-item dropdown" *ngIf="isAdminUser">
+       <div class="dropdown book-table">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+           Manage Products
+         </button>
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <li><a class="dropdown-item" routerLink="/add" routerLinkActive="active">Add Product</a></li>
+           <li><a class="dropdown-item" routerLink="/list" routerLinkActive="active">Product List</a></li>
+         </ul>
+       </div>
+     </li>
+   </ul>
+   <button class="btn book-table btn-outline-dark">
+     <a routerLink="/book" routerLinkActive="active" style="text-decoration: none; color: aliceblue;">Book A Table</a>
+   </button>
+ </nav>  --> 
+ 
+ 
+
+ 
+ 
+<!-- <header class="header">
+  <div class="contact-info">
+     <span><i class="fas fa-phone-alt"></i> (414) 857 - 0107</span>
+     <span><i class="fas fa-envelope"></i> yummybistrobliss</span>
+  </div>
+  <div class="social-icons">
+     <a href="#"><i class="fab fa-facebook p-2 rounded-5 " style="background-color:gray ; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-twitter p-2 rounded-5" style="background-color:gray ; font-size: 15px;"></i></a>
+     <a href="#"><i class="fab fa-instagram p-2 rounded-5" style="background-color:gray ; font-size: 15px;"></i></a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="logo">
+     <img src="../../assets/img/Vector.png" alt="Bistro Bliss Logo">
+  </div>
+  <ul class="nav-links">
+     <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+     <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+     <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+     <li><a routerLink="/book" routerLinkActive="active">Book table</a></li>
+     <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+     <li class="nav-item">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" routerLink="/add"routerLinkActive="active">Add</a></li>
+          <li><a class="dropdown-item" routerLink="/list"routerLinkActive="active">Product List</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+  <button class="btn book-table btn-outline-dark" ><a routerLink="/book" routerLinkActive="active" style="text-decoration: none; color: aliceblue;">Book A Table</a></button>
+</nav> -->
+

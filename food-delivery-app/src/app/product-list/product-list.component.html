@@ -1,0 +1,54 @@
+<!-- <div class="container mt-5 text-center">
+  <h2 class="text-center mb-4">Product List</h2>
+
+  <!-- Error message display -->
+  <!-- <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productName }}</td>
+        <td>{{ product.productPrice }}</td>
+        <td>
+          <button (click)="goToEditProduct(product._id)" class="btn btn-primary mx-5">Edit</button>
+          <button (click)="goToDeleteProduct(product._id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> --> 
+<div class="container mt-5 text-center" style="margin:  80px;">
+  <h2 class="text-center mb-4">Product List</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <table class="table table-striped">
+    <thead style="background-color: #333;">
+      <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Image</th> <!-- New Column for Image -->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productName }}</td>
+        <td>{{ product.productPrice }}</td>
+        <td><img [src]="product.Image" alt="{{ product.productName }}" style="max-height: 100px;"></td> <!-- Image Display -->
+        <td>
+          <button (click)="goToEditProduct(product._id)" class="btn btn-primary mx-5">Edit</button>
+          <button (click)="goToDeleteProduct(product._id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

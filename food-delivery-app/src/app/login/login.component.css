@@ -1,0 +1,17 @@
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)
+
+    
+  }
+  
+  .alert {
+    display: block;
+  }
+  label{
+    color:#AD343E ;
+margin-bottom: 10px;
+  }

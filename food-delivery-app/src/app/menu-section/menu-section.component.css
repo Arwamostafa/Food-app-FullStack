@@ -1,0 +1,76 @@
+/* Section styling */
+.menu-section {
+  text-align: center;
+  padding: 70px 0;
+  background-color: transparent;
+ 
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Menu categories container */
+.menu-categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+/* Each category box styling */
+.category-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-box .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.category-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.category-box p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.category-box .menu-link {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.category-box .menu-link:hover {
+  color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .category-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-box {
+    width: 100%;
+  }
+}
+
+  
